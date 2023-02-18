@@ -11,18 +11,21 @@ function myIMC() {
         let altura = height.value;
         let imc = peso / Math.pow(altura, 2);
 
-        if(isNaN(peso)) {
-            result.innerHTML = `<p>Peso Inválido</p>`;
-        } else if(isNaN(altura)) {
-            result.innerHTML = `<p>Altura Inválida</p>`;
-        } else {
-            result.innerHTML = `<p>Resultado: ${imc.toFixed(2)}</p>`;
-            result.innerHTML += `<p>Status: ${resultado(imc.toFixed(2))}</p>`;
-        }
-        
+        verification(peso, altura, imc, result);  
     }
 
     form.addEventListener('submit', eventDeForm);
+}
+
+function verification(peso, altura, imc, result) {
+    if(isNaN(peso)) {
+        result.innerHTML = `<p>Peso Inválido</p>`;
+    } else if(isNaN(altura)) {
+        result.innerHTML = `<p>Altura Inválida</p>`;
+    } else {
+        result.innerHTML = `<p>Resultado: ${imc.toFixed(2)}</p>`;
+        result.innerHTML += `<p>Status: ${resultado(imc.toFixed(2))}</p>`;
+    }
 }
 
 function resultado(imc) {
