@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #00FFEE;
+    --primary-color-dark: #098159;
+}
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    border: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+.container {
+    max-width: 640px;
+    margin: 50px auto;
+    background: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+/* Alinhando Fomulario */
+form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+form input {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+form input:focus {
+    outline: auto;
+}
+
+form button {
+    border: none;
+    background: var(--primary-color);
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: var(--primary-color-dark);
+}
+
+table {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.resultado {
+    text-align: center;
+    font-family:'Open Sans';
+    font-weight: 700;
+    background: var(--primary-color-dark);
+    border-radius: 5px;
+}
+
